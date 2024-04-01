@@ -1,0 +1,13 @@
+[unit]
+Description=Servico com screen
+
+[Service]
+Type=forking
+Restart=always
+RestartSec=5
+User=rpi5
+ExecStart=/usr/bin/screen -dmS demo /usr/bin/python3 /home/rpi5/teste-olamundo.py
+
+[Install]
+WantedBy=multi-user.target
+
