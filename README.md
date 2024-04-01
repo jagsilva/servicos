@@ -2,7 +2,7 @@ Exemplo de como criar um serviço em linux
   sudo nano /etc/systemd/system/js_servico_faz_qq_coisa.service
 
 conteudo do ficheiro:
-'''
+```
   [Unit]
   Description=Meu serviço Python
   
@@ -12,7 +12,8 @@ conteudo do ficheiro:
   
   [Install]
   WantedBy=multi-user.target
-'''
+```
+
 O conteudo deste ficheiro pode ser um dos exemplos em cima. Este deverá ser o mais simples.
 
 Recarregar os serviços:
