@@ -1,0 +1,14 @@
+ [Unit]
+ Description=Servico de recolha de dados dos emissor para uma base de dados
+ After=multi-user.target
+ After=mysqld.service
+ Requires=mysqld.service
+
+ [Service]
+ Type=idle
+ ExecStart=/usr/bin/python /home/pi/servidorRecolhaRVR-1.py > /home/pi/logServi$
+# Restart=on-failure
+# RestartSec=30
+
+ [Install]
+ WantedBy=multi-user.target
