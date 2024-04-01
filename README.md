@@ -44,3 +44,9 @@ sudo systemctl stop js_servico_faz_qq_coisa.service
 ```
 
 
+Como arrancar um script num screen com rc.local
+```
+/usr/bin/screen -dm -S rds /usr/bin/python /home/pi/readRDS.py
+```
+
+
