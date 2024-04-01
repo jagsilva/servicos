@@ -1,0 +1,10 @@
+[Unit]
+Description=O Meu Servico
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/pi/o_meu_servico.py
+
+[Install]
+WantedBy=multi-user.target
