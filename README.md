@@ -1,17 +1,19 @@
 Exemplo de como criar um serviço em linux
+```
   sudo nano /etc/systemd/system/js_servico_faz_qq_coisa.service
+```
 
 conteudo do ficheiro:
 ```
-  [Unit]
-  Description=Meu serviço Python
-  
-  [Service]
-  Type=simple
-  ExecStart=/usr/bin/python3 /home/pi/js_meu_script.py
-  
-  [Install]
-  WantedBy=multi-user.target
+[Unit]
+Description=Meu serviço Python
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/js_meu_script.py
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 O conteudo deste ficheiro pode ser um dos exemplos em cima. Este deverá ser o mais simples.
