@@ -1,9 +1,9 @@
-Exemplo de como criar um serviço em linux
+# Exemplo de como criar um serviço em linux
 ```
 sudo nano /etc/systemd/system/js_servico_faz_qq_coisa.service
 ```
 
-conteudo do ficheiro:
+## conteudo do ficheiro:
 ```
 [Unit]
 Description=Meu serviço Python
@@ -16,40 +16,40 @@ ExecStart=/usr/bin/python3 /home/pi/js_meu_script.py
 WantedBy=multi-user.target
 ```
 
-O conteudo deste ficheiro pode ser um dos exemplos em cima. Este deverá ser o mais simples.
+### O conteudo deste ficheiro pode ser um dos exemplos em cima. Este deverá ser o mais simples.
 
 
 ```
 sudo chmod 644 /etc/systemd/system/js_servico_faz_qq_coisa.service
 ```
 
-Recarregar os serviços:
+## Recarregar os serviços:
 ```
 sudo systemctl daemon-reload
 ```
 
-Habilitar o serviço
+## Habilitar o serviço
 ```
 sudo systemctl enable js_servico_faz_qq_coisa.service
 ```
 
-Arrancar o serviço
+## Arrancar o serviço
 ```
 sudo systemctl start js_servico_faz_qq_coisa.service
 ```
 
-Estado do serviço
+## Estado do serviço
 ```
 sudo systemctl status js_servico_faz_qq_coisa.service
 ```
 
-Parar o serviço
+## Parar o serviço
 ```
 sudo systemctl stop js_servico_faz_qq_coisa.service
 ```
 
 
-Como arrancar um script num screen com rc.local
+### Como arrancar um script num screen com rc.local
 ```
 /usr/bin/screen -dm -S rds /usr/bin/python /home/pi/readRDS.py
 ```
